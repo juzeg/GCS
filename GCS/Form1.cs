@@ -19,37 +19,18 @@ namespace GCS
 
        
 
-        private void CLI_Enter(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void CLI_Validated(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CLI_Enter_1(object sender, EventArgs e)
-        {
-          
-
-
-        }
-
-        private void CLI_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void butCLI_Click(object sender, EventArgs e)
+        {
+            groupCLI.Visible = true;
+
+
+
         }
     }
 }
