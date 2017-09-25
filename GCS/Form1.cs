@@ -10,26 +10,34 @@ using System.Windows.Forms;
 
 namespace GCS
 {
-    public partial class Form1 : Form
+    public partial class GCS : Form
     {
-        public Form1()
+        public GCS()
         {
             InitializeComponent();
         }
 
-       
+         DataDisplay DD;
 
-        
-        private void button3_Click(object sender, EventArgs e)
+        private void dataDisplayToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (DD == null)
+            {
+                DD = new DataDisplay();
+                DD.MdiParent = this;
+                DD.FormClosed += new FormClosedEventHandler(DD_FormClosed);
+                DD.Show();
+
+            }
+            else DD.Activate();
+
         }
 
-        private void butCLI_Click(object sender, EventArgs e)
+        void DD_FormClosed(object sender, FormClosedEventArgs e)
         {
-            groupCLI.Visible = true;
 
 
+            DD = null;
 
         }
     }
