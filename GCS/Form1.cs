@@ -24,7 +24,6 @@ namespace GCS
             if (DD == null)
             {
                 DD = new DataDisplay();
-                DD.MdiParent = this;
                 DD.FormClosed += new FormClosedEventHandler(DD_FormClosed);
                 DD.Show();
 
