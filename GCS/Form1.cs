@@ -69,22 +69,40 @@ namespace GCS
         {
         }
 
-        private void SendCommand_Click(object sender, EventArgs e)
+      
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (serialPort1.IsOpen)
-                serialPort1.WriteLine(textBox2.Text);
+            if (LM == null)
+            {
+                LM = new LoadMission();
+                LM.FormClosed += LM_FormClosed;
+                LM.Show();
+            }
             else
-                try
-                {
-                    serialPort1.PortName = comboBox1.Text;
-                    serialPort1.Open();
-                    serialPort1.WriteLine(textBox2.Text);
-                }
-                catch
-                {
-                    textBox1.Text += "connection cannont be estabilished \n";
-                }
-            textBox2.Text = null;
+            {
+                LM.Activate();
+            }
+
+        }
+        private void LM_FormClosed(object seender, FormClosedEventArgs e)
+        {
+            LM = null;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
