@@ -58,5 +58,16 @@ namespace GCS
             NM = null;
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
+        {
+            textBox1.Text += serialPort1.ReadLine();
+            textBox1.Text += "\n";
+        }
     }
 }

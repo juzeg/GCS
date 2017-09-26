@@ -92,12 +92,13 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(231, 187);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 62);
             this.button1.TabIndex = 6;
             this.button1.Text = "confirm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
