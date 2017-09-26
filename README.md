@@ -1,3 +1,4 @@
+<pre>
 # GCS
 Ground Control Station softare for cansat 2018 polish editon by Team Puszek 
    Find us #teampuszek on facebook, where we update weekly on our progress.
@@ -32,3 +33,4 @@ Ground Control Station softare for cansat 2018 polish editon by Team Puszek
    6.1 Ability to be used by many useres at the same time.
    6.2 Dynamic privilege moderation.
 
+</pre> 
