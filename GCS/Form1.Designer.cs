@@ -45,7 +45,12 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.SendCommand = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // serialPort1
@@ -136,22 +141,61 @@
             this.textBox1.Location = new System.Drawing.Point(12, 37);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1338, 655);
+            this.textBox1.Size = new System.Drawing.Size(1338, 530);
             this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 698);
+            this.textBox2.Location = new System.Drawing.Point(12, 573);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(1338, 31);
+            this.textBox2.Size = new System.Drawing.Size(1130, 31);
             this.textBox2.TabIndex = 3;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1078, 772);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(57, 8);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // SendCommand
+            // 
+            this.SendCommand.Location = new System.Drawing.Point(1148, 573);
+            this.SendCommand.Name = "SendCommand";
+            this.SendCommand.Size = new System.Drawing.Size(161, 31);
+            this.SendCommand.TabIndex = 5;
+            this.SendCommand.Text = "Send";
+            this.SendCommand.UseVisualStyleBackColor = true;
+            this.SendCommand.Click += new System.EventHandler(this.SendCommand_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "COM1",
+            "COM2",
+            "COM3"});
+            this.comboBox1.Location = new System.Drawing.Point(12, 610);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(147, 33);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // GCS
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1362, 724);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.SendCommand);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
@@ -162,6 +206,7 @@
             this.Text = "Ground Control Station";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,6 +227,10 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SendCommand;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

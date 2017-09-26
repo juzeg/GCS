@@ -69,5 +69,19 @@ namespace GCS
             textBox1.Text += serialPort1.ReadLine();
             textBox1.Text += "\n";
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SendCommand_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen)
+            {
+                serialPort1.WriteLine(textBox2.Text);
+            } else 
+            textBox2.Text = null;
+        }
     }
 }
