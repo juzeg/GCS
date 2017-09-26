@@ -66,6 +66,7 @@ namespace GCS
 
         private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
+
             textBox1.Text += serialPort1.ReadLine();
             textBox1.Text += "\n";
         }
@@ -80,7 +81,22 @@ namespace GCS
             if (serialPort1.IsOpen)
             {
                 serialPort1.WriteLine(textBox2.Text);
-            } else 
+            }
+            else
+            {
+                try
+                {
+                    serialPort1.PortName = comboBox1.Text;
+                    serialPort1.Open();
+                    serialPort1.WriteLine(textBox2.Text);
+                }
+                catch
+                {
+                    textBox1.Text += "connection cannont be estabilished \n";
+                }
+                
+               
+            }
             textBox2.Text = null;
         }
     }
