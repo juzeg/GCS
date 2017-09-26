@@ -17,7 +17,8 @@ namespace GCS
             InitializeComponent();
         }
 
-         DataDisplay DD;
+      public   NewMission NM;
+      public   DataDisplay DD;
 
         private void dataDisplayToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -37,6 +38,24 @@ namespace GCS
 
 
             DD = null;
+
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (NM == null)
+            {
+                NM = new NewMission();
+                NM.FormClosed += new FormClosedEventHandler(NM_FormClosed);
+                NM.Show();
+
+            }
+            else NM.Activate();
+            
+        }
+        void NM_FormClosed(object seender, FormClosedEventArgs e)
+        {
+            NM = null;
 
         }
     }
