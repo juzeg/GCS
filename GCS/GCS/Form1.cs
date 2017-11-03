@@ -9,7 +9,7 @@ namespace GCS
         public DataDisplay DD;
         public LoadMission LM;
         public NewMission NM;
-        public systemcheck2 sc;
+
 
 
         public GCS()
@@ -53,11 +53,6 @@ namespace GCS
         private void NM_FormClosed(object seender, FormClosedEventArgs e)
         {
             NM = null;
-        }
-
-        private void sc_FormClosed(object seender, FormClosedEventArgs e)
-        {
-            sc = null;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -106,23 +101,6 @@ namespace GCS
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void systemsCheckToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            sc = new systemcheck2();
-            sc.FormClosed += sc_FormClosed;
-            sc.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void missionStatusToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

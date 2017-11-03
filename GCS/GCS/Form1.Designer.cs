@@ -61,16 +61,16 @@
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -116,21 +116,21 @@
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // joinToolStripMenuItem
             // 
             this.joinToolStripMenuItem.Name = "joinToolStripMenuItem";
-            this.joinToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.joinToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.joinToolStripMenuItem.Text = "Join";
             // 
             // dataDisplayToolStripMenuItem
@@ -145,14 +145,12 @@
             this.systemsCheckToolStripMenuItem.Name = "systemsCheckToolStripMenuItem";
             this.systemsCheckToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.systemsCheckToolStripMenuItem.Text = "Systems Check";
-            this.systemsCheckToolStripMenuItem.Click += new System.EventHandler(this.systemsCheckToolStripMenuItem_Click);
             // 
             // missionStatusToolStripMenuItem
             // 
             this.missionStatusToolStripMenuItem.Name = "missionStatusToolStripMenuItem";
             this.missionStatusToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.missionStatusToolStripMenuItem.Text = "Mission Status";
-            this.missionStatusToolStripMenuItem.Click += new System.EventHandler(this.missionStatusToolStripMenuItem_Click);
             // 
             // checkListToolStripMenuItem
             // 
@@ -333,24 +331,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Database status";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(660, 58);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 25);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "N/A";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(564, 56);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 25);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Logged:";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.textBox5);
@@ -363,13 +343,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Create database";
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(80, 38);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 31);
-            this.textBox5.TabIndex = 7;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -378,6 +351,31 @@
             this.label1.Size = new System.Drawing.Size(51, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Port";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(80, 38);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 31);
+            this.textBox5.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(564, 56);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 25);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Logged:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(660, 58);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 25);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "N/A";
             // 
             // groupBox4
             // 
@@ -391,12 +389,18 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Start database";
             // 
-            // textBox6
+            // button4
             // 
-            this.textBox6.Location = new System.Drawing.Point(115, 55);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(166, 31);
-            this.textBox6.TabIndex = 2;
+            this.button4.Location = new System.Drawing.Point(304, 38);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(211, 67);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "start";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // label12
             // 
@@ -407,19 +411,12 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Path";
             // 
-            // button4
+            // textBox6
             // 
-            this.button4.Location = new System.Drawing.Point(304, 38);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(211, 67);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "start";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.textBox6.Location = new System.Drawing.Point(115, 55);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(166, 31);
+            this.textBox6.TabIndex = 2;
             // 
             // GCS
             // 
